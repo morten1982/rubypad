@@ -6,8 +6,10 @@ Ruby Code Editor / Ruby IDE / RubyTk Codeeditor
 # Description
 Codeeditor / light IDE made with ruby for ruby development :) 
 using RubyTk
-RubyPad is using the "forest ttk theme" which you can find on github :)
-https://github.com/rdbende/Forest-ttk-theme
+
+- > RubyPad is using the "forest ttk theme" which you can find on github :)
+
+- > https://github.com/rdbende/Forest-ttk-theme
 
 # Features
 - > Using RubyTk as GUI
