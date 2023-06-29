@@ -9,7 +9,7 @@ using RubyTk
 
 - > RubyPad is using the "forest ttk theme" which you can find on github :)
 
-- > https://github.com/rdbende/Forest-ttk-theme
+https://github.com/rdbende/Forest-ttk-theme
 
 # Features
 - > Using RubyTk as GUI
