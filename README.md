@@ -21,7 +21,7 @@ using RubyTk
 - > Filebrowser included (delete, rename ... files and folders)
 
 - > should be cross platform  -> but you need to implement path activities
-    to gsub '\' with '/' ... so actually it is Linux (Mac?) only
+    to gsub '\\' with '/' ... so actually it is Linux (Mac?) only
 
 # Requirements
 tk
