@@ -116,10 +116,10 @@ class RubyPad < TkRoot
   
   def build_buttonbox(theme, buttonbox)
     if theme == 'light'
-      self.tk_call("source", "forest-light.tcl")
+      self.tk_call("source", __dir__ + "/" + "forest-light.tcl")
       ::Tk::Tile::Style.theme_use 'forest-light'
     elsif theme == 'dark'
-      self.tk_call("source", "forest-dark.tcl")
+      self.tk_call("source", __dir__ + "/" + "forest-dark.tcl")
       ::Tk::Tile::Style.theme_use 'forest-dark'
     end
     
