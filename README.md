@@ -3,7 +3,7 @@
 - > Ruby IDE 
 - > RubyTk Codeeditor
 
-![alt text]([https://github.com/morten1982/rubypad/blob/main/images/rubypad-run.png])
+![alt text](https://github.com/morten1982/rubypad/blob/main/images/rubypad-run.png)
 
 # Description
 - > Codeeditor
