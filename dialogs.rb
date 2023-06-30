@@ -363,6 +363,8 @@ class GotoLineDialog < TkToplevel
     cancel_button.command{ cancel }
     
     buttonbox.pack('padx' => 5, 'pady' => 5, 'side' => 'bottom')
+    self.bind("Escape", proc {cancel})
+    
     @spinbox.set_focus
   end
   
@@ -544,6 +546,7 @@ class SettingsDialog < TkToplevel
     standard_button.command{ set_standard }
     
     buttonbox.pack('padx' => 5, 'pady' => 5, 'side' => 'bottom')
+    self.bind("Escape", proc {cancel})
     
     do_combobox_selected(@system_combobox)
   end
@@ -797,6 +800,8 @@ class SearchDialog < TkToplevel
     cancel_button.command{ cancel }
     
     buttonbox.pack('padx' => 5, 'pady' => 5, 'side' => 'bottom')
+    self.bind("Escape", proc {cancel})
+    
     @search_entry.set_focus
   end
   

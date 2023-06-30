@@ -449,6 +449,7 @@ class RubyPad < TkRoot
   end
   
   def button_run
+    button_save
     begin
       s = Settings.new
       sys = s.system['system']

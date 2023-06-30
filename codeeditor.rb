@@ -50,6 +50,25 @@ class Codeeditor < Tk::Text
     self.bind("ButtonRelease-1", proc { update_pos} )
     self.bind('Control-g', proc {@parent.on_double_click_pos(self)} )
     self.bind('<Modified>', proc {mark_modified})
+    # shortcuts
+    self.bind("Control-n", proc {@parent.overlord.button_new})
+    self.bind("Control-o", proc {@parent.overlord.button_open})
+    self.bind("Control-s", proc {@parent.overlord.button_save})
+    self.bind("Control-Shift-KeyPress-S", proc {@parent.overlord.button_save_as})
+    self.bind("Control-p", proc {@parent.overlord.button_print})
+    self.bind("Control-plus", proc {@parent.overlord.button_zoom_in})
+    self.bind("Control-minus", proc {@parent.overlord.button_zoom_out})
+    self.bind("F5", proc {@parent.overlord.button_run})
+    self.bind("F8", proc {@parent.overlord.button_terminal})
+    self.bind("F7", proc {@parent.overlord.button_irb})
+    self.bind("F2", proc {@parent.overlord.button_settings})
+    self.bind("Control-f", proc {@parent.overlord.button_search})
+    
+    
+        
+    
+    
+    
 
     make_completion_list
     
@@ -257,6 +276,8 @@ class Codeeditor < Tk::Text
   end
 
   def on_key_release(event=none)
+    # debugging
+    #p event.keysym
     @modified = true
     mark_modified
     
