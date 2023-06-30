@@ -1,5 +1,7 @@
 # rubypad
-Ruby Code Editor / Ruby IDE / RubyTk Codeeditor
+Ruby Code Editor
+Ruby IDE 
+RubyTk Codeeditor
 
 ![alt text](https://github.com/morten1982/rubypad/blob/master/images/rubypad-run.png)
 
