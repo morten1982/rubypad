@@ -4,8 +4,9 @@ Ruby Code Editor / Ruby IDE / RubyTk Codeeditor
 ![alt text](https://github.com/morten1982/rubypad/blob/master/images/rubypad-run.png)
 
 # Description
-Codeeditor / light IDE made with ruby for ruby development :) 
-using RubyTk
+- > Codeeditor
+- > light IDE made with ruby for ruby development :) 
+- > using RubyTk
 
 - > RubyPad is using the "forest ttk theme" which you can find on github :)
 
