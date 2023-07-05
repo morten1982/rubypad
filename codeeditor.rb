@@ -99,7 +99,7 @@ class Codeeditor < Tk::Text
   def theme_use_light
     self.configure('insertbackground' => 'black')
     self.configure('background' => '#F2F2F2')       # #FFFFFF
-    self.configure('foreground' =>'#000000')
+    self.configure('foreground' => '#000000')
     self.tag_configure("sel", background: "#e0e0e0", foreground: "black")
     self.tag_configure('keyword', foreground: 'blue') 
     self.tag_configure('string', foreground: 'green')   
@@ -141,8 +141,9 @@ class Codeeditor < Tk::Text
     
     is_string = false
     case line_text           # complete line
-    when /("|').*("|')/      # string
-      start_i = line_number + "." + line_text.index(/("|').*("|')/).to_s
+    #when /("|').*("|')/      # string
+    when /(["'])((?:\\1|(?:(?!\1)).)*)(\1)/
+        start_i = line_number + "." + line_text.index(/("|').*("|')/).to_s
       end_i = line_number + "." + ($`.size + $&.size).to_s
       self.tag_add('string', start_i, end_i)
     end
