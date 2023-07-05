@@ -58,18 +58,12 @@ class Codeeditor < Tk::Text
     self.bind("Control-p", proc {@parent.overlord.button_print})
     self.bind("Control-plus", proc {@parent.overlord.button_zoom_in})
     self.bind("Control-minus", proc {@parent.overlord.button_zoom_out})
-    self.bind("F5", proc {@parent.overlord.button_run})
-    self.bind("F8", proc {@parent.overlord.button_terminal})
-    self.bind("F7", proc {@parent.overlord.button_irb})
-    self.bind("F2", proc {@parent.overlord.button_settings})
-    self.bind("Control-f", proc {@parent.overlord.button_search})
+    self.bind("F5", proc { @parent.overlord.button_run})
+    self.bind("F8", proc { @parent.overlord.button_terminal})
+    self.bind("F7", proc { @parent.overlord.button_irb})
+    self.bind("F2", proc { @parent.overlord.button_settings})
+    self.bind("Control-f", proc { @parent.overlord.button_search})
     
-    
-        
-    
-    
-    
-
     make_completion_list
     
     settings = Settings.new
@@ -142,7 +136,7 @@ class Codeeditor < Tk::Text
     is_string = false
     case line_text           # complete line
     #when /("|').*("|')/      # string
-    when /(["'])((?:\\1|(?:(?!\1)).)*)(\1)/
+    when /(["'])((?:\\\1|(?:(?!\1)).)*)(\1)/
         start_i = line_number + "." + line_text.index(/("|').*("|')/).to_s
       end_i = line_number + "." + ($`.size + $&.size).to_s
       self.tag_add('string', start_i, end_i)
@@ -173,7 +167,7 @@ class Codeeditor < Tk::Text
       when /^(\+|\-|\*|\/|=|>|<|!|%|\,)/       # operator?
         self.tag_add('operator', start_index, e_index) #unless is_string
       #when /^\d+/
-        #self.tag_add('number', start_index, e_index) unless is_string
+      #  self.tag_add('number', start_index, e_index) unless is_string
       when /^'.*/, /^".*/     # start_with? string
         is_string = true
       when /.*'$/, /.*"$/     # end_with? string
