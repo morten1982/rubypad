@@ -47,5 +47,5 @@ or
 MIT -> feel free to fork it => make it better if you want to do this :)
 
 # to DO
--> improve the comments highlighting /syntax highlighting in general
+-> improve the comments highlighting / syntax highlighting in general
 -> visualize brace matching
