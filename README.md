@@ -29,6 +29,16 @@ https://github.com/rdbende/Forest-ttk-theme
 # Requirements
 tk
 
+# setup on ubuntu 
+sudo apt install tk-dev
+
+gem install tk -- --with-tcltkversion=8.6 \
+--with-tcl-lib=/usr/lib/x86_64-linux-gnu \
+--with-tk-lib=/usr/lib/x86_64-linux-gnu \
+--with-tcl-include=/usr/include/tcl8.6 \
+--with-tk-include=/usr/include/tcl8.6 \
+--enable-pthread
+
 # Install
 RubyPad is using Tcl/Tk 
 
