@@ -29,7 +29,7 @@ https://github.com/rdbende/Forest-ttk-theme
 # Requirements
 tk
 
-# setup on ubuntu 
+# setup on debian
 sudo apt install tk-dev
 
 sudo gem install tk -- --with-tcltkversion=8.6 \
